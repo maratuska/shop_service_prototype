@@ -3,6 +3,9 @@
 ```shell script
 python -m venv env && source env/bin/activate
 pip install -r requirements.txt
+
+docker run --rm -d -p 127.0.0.1:27017:27017 --name shop-service mongo
+
 python -m app
 ```
 
