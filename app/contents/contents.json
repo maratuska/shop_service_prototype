@@ -1,0 +1,63 @@
+[
+    {
+        "product_id": "123456789123",
+        "name": "AMD Ryzen 5 2600",
+        "description": "Сокет SocketAM4, ядро Pinnacle Ridge, ядер — 6, потоков — 12...",
+        "params": [
+            {"core": 6},
+            {"thread": 12},
+            {"speed": 3.4}
+        ]
+    },
+    {
+        "product_id": "1234567891233",
+        "name": "AMD Ryzen 5 3600",
+        "params": [
+            {"core": 6},
+            {"thread": 12},
+            {"speed": 3.6},
+            {"L3": 32}
+        ]
+    },
+    {
+        "product_id": "123456789124",
+        "name": "Intel Core i5 9400F",
+        "description": "Сокет LGA 1151v2, ядро Coffee Lake, ядер — 6, потоков — 6, L3 кэш 9МБ...",
+        "params": [
+            {"core": 6},
+            {"thread": 6},
+            {"speed": 2.9},
+            {"L3": 9}
+        ]
+    },
+    {
+        "product_id": "1234567891244",
+        "name": "AMD Ryzen 3 3200G",
+        "description": "Сокет SocketAM4, ядро Picasso, ядер — 4, потоков — 4, L3 кэш 4МБ...",
+        "params": [
+            {"core": 4},
+            {"speed": 3.6},
+            {"L3": 4}
+        ]
+    },
+    {
+        "product_id": "123456789125",
+        "name": "INTEL Core i3 9100F",
+        "description": "Сокет LGA 1151v2, ядро Coffee Lake, ядер — 4, потоков — 4...",
+        "params": [
+            {"core": 4},
+            {"thread": 4},
+            {"speed": 3.6}
+        ]
+    },
+    {
+        "product_id": "1234567891255",
+        "name": "AMD Ryzen 7 2700",
+        "description": "Сокет SocketAM4, ядро Pinnacle Ridge, ядер — 8, потоков — 16...",
+        "params": [
+            {"core": 8},
+            {"thread": 16},
+            {"speed": 3.2}
+        ]
+    }
+]
