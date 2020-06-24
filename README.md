@@ -1,4 +1,4 @@
-### Установка
+### Application start
 
 ```shell script
 python -m venv env && source env/bin/activate
@@ -9,9 +9,15 @@ docker run --rm -d -p 127.0.0.1:27017:27017 --name shop-service mongo
 python -m app
 ```
 
-### Тестовый сценарий
+### Tests (httpie/curl)
 
-**Создать товар**
+**create product**
+
+```shell script
+http post localhost:13031/product \
+product_id="000000000001" name="AMD Ryzen 9 3900X" \
+params:='[{"core": 12}, {"L3": 64}]'
+```
 
 ```shell script
 curl localhost:13031/product --request POST \
@@ -19,19 +25,32 @@ curl localhost:13031/product --request POST \
 "params": [{"core": 12}, {"L3": 64}]}'
 ```
 
-**Найти его по параметру**
+**find product by parameter**
+
+```shell script
+http get localhost:13031/products params:='{"core": 12}'
+```
 
 ```shell script
 curl localhost:13031/products --request GET --data '{"params": {"core": 12}}'
 ```
 
-**Получить детали товара по ID**
+**find product by barcode value**
+
+```shell script
+http get localhost:13031/products product_id="000000000001"
+```
 
 ```shell script
 curl localhost:13031/product --request GET --data '{"product_id": "000000000001"}'
 ```
 
-**Применить несколько фильтров**
+**multifilter**
+
+```shell script
+http get localhost:13031/products \
+name="ryzen" params:='{"core": 6, "thread": 12}'
+```
 
 ```shell script
 curl localhost:13031/products --request GET \
